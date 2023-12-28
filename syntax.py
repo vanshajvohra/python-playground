@@ -83,3 +83,24 @@ print(squares)
 names = ['Fighter', 'and', 'the', 'Warriors']
 proper_nouns = [name for name in names if len(name) > 3]
 print(proper_nouns)
+
+# Classes
+class Point:
+   def __init__(self, x, y):
+       self.x = x
+       self.y = y
+
+   @classmethod
+   def zero(cls):
+       cls(0, 0)
+    
+   def draw(self):
+       print(f"The point is ({self.x}), ({self.y})")
+       
+myPoint = Point(1, 2)
+myPoint.draw() # point is an object of class Point
+myPoint.y
+myPoint.x
+myPointTwo = Point(3, 4)
+myPointTwo.y = 7
+myPointTwo.draw()
