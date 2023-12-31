@@ -104,3 +104,6 @@ myPoint.x
 myPointTwo = Point(3, 4)
 myPointTwo.y = 7
 myPointTwo.draw()
+
+class TagCloud: 
+    
