@@ -105,5 +105,35 @@ myPointTwo = Point(3, 4)
 myPointTwo.y = 7
 myPointTwo.draw()
 
-class TagCloud: 
+# Properties in Python
+class Product:
+    def __init__(self, price):
+        self.price = price # This is how we set an attribute price
     
+    @property # decorator
+    def price(self):
+        return self.__price
+    
+    @price.setter # decorator
+    def price(self, value):
+        if value < 0: raise ValueError("Price cannot be negative")
+        self.__price = value
+
+product = Product(10)
+print(product.price)
+
+
+ # Simple Inheiritance
+class Animal:
+    def __init__(self):
+        self.age = 1
+    def eat(self):
+        print("Eats food")
+
+class Mammal(Animal):
+    def heloo(self):
+        print('hello')
+
+m = Mammal()
+print(m.age)
+
