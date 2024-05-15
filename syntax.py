@@ -137,3 +137,12 @@ class Mammal(Animal):
 m = Mammal()
 print(m.age)
 
+# Lists again
+individual_chars = list("Hello World")
+print(individual_chars)
+clean_chars = [s for s in individual_chars if s.isalnum()]
+print(clean_chars)
+print(clean_chars[4])
+nums = list(range(20))
+print(nums[::2]) # to print alternate numbers
+
