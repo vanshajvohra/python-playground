@@ -146,3 +146,53 @@ print(clean_chars[4])
 nums = list(range(20))
 print(nums[::2]) # to print alternate numbers
 
+# List unpacking
+numbers = [1, 2, 3, 4]
+first, second, *third = numbers
+print(first)
+print(second)
+print(third)
+list_unpacking_example_list = ["a", 1, 3, 5, 7, 9, "z"]
+lu_first, *others, lu_last = list_unpacking_example_list
+print(lu_first)
+print(*others)
+print(lu_last)
+
+# Looping in lists
+loop_list_example = ["abcd", 32, "z", True]
+for l in loop_list_example:
+    print(l)
+
+# to get indices and their corresponding elements
+# we use enumerate() function to convert our list into a tuple
+for index, letter in enumerate(loop_list_example):
+    print(index, letter)
+
+# Sorting through a tuple
+example_for_sorting = [("Product 1", 10), ("product 7", 3)]
+
+list_comprehension_even = [x*2 for x in range(5)]
+print(list_comprehension_even)
+
+set_comprehension_even = {x * 2 for x in range(5)}
+print(set_comprehension_even)
+
+# Dictionary comrehensions
+dict_comprehension_eg = {x: x*2 for x in range(5)}
+print(dict_comprehension_eg)
+
+# Exercise
+# Find the most repeated character in some text
+sentence = "This is a common interview question."
+character_count = {} # [] is a list, () is a tuple\
+for char in character_count:
+    if char in character_count:
+        character_count[char] += 1
+    else:
+        character_count[char] = 1
+        
+# Hash Map/Dictionary Implementation in Python
+empty_dict = {}
+not_empty_dict = {1: 1, 2: 4, 3: 9, 4: 16}
+# Checking for existence using the key
+print(3 in not_empty_dict)
